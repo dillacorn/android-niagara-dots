@@ -64,6 +64,7 @@
 ---
 
 ### **Utility & System Apps**  
+- [DeepSeek - AI Assistant](https://play.google.com/store/apps/details?id=com.deepseek.chat&hl=en_US)
 - [AtomicClock: NTP Time](https://play.google.com/store/apps/details?id=partl.atomicclock)  
 - [IP Tools: WiFi Analyzer](https://play.google.com/store/apps/details?id=com.ddm.iptools)  
 - [Caffeine - Keep Screen On](https://play.google.com/store/search?q=caffeine&c=apps)  
@@ -81,15 +82,23 @@
 
 ---
 
+### **Network Assisted Storage (NAS) Apps**
+- [Tailscale](https://play.google.com/store/apps/details?id=com.tailscale.ipn&hl=en_US)
+- [WireGuard](https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en_US)
+- [Immich](https://play.google.com/store/apps/details?id=app.alextran.immich)  
+- [Jellyfin for Android TV](https://play.google.com/store/apps/details?id=org.jellyfin.androidtv)
+- [Symfonium: Music player & cast](https://play.google.com/store/apps/details?id=app.symfonik.music.player&hl=en_US)
+- [qBitController](https://play.google.com/store/apps/details?id=dev.bartuzen.qbitcontroller&hl=en_US)
+- [File Manager](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager&hl=en_US)
+
+---
+
 ### **Open Source & FOSS Apps**  
 - [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/)  
-- [Mull Browser](https://f-droid.org/en/packages/us.spotco.fennec_dos/)  
-- [Jellyfin for Android TV](https://play.google.com/store/apps/details?id=org.jellyfin.androidtv)  
-- [Immich](https://play.google.com/store/apps/details?id=app.alextran.immich)  
+- [Mull Browser](https://f-droid.org/en/packages/us.spotco.fennec_dos/)
 
 ---
 
 ### **GitHub-Sourced Apps**  
 - [ReVanced Manager](https://github.com/ReVanced/revanced-manager)  
-- [Cromite](https://github.com/uazo/cromite/releases)  
-*Primarily using Fennec now.*  
+- [Cromite](https://github.com/uazo/cromite/releases)
