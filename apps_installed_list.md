@@ -72,6 +72,8 @@
 - [Termius - SSH and SFTP Client](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client)  
 - [Weather & Widget - Weawow](https://play.google.com/store/apps/details?id=com.weawow)
 - [Remote for Android TV](https://play.google.com/store/search?q=Remote+for+Android+TV&c=apps&hl=en_US)
+- [FUTO Keyboard](https://play.google.com/store/apps/details?id=wseemann.media.romote&hl=en_US)
+- [FUTO Voice Input](https://play.google.com/store/apps/details?id=org.futo.voiceinput&hl=en_US)
 
 ---
 
