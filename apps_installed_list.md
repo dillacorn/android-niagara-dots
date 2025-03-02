@@ -70,7 +70,8 @@
 - [Caffeine - Keep Screen On](https://play.google.com/store/search?q=caffeine&c=apps)  
 - [LocalSend: Transfer Files](https://play.google.com/store/apps/details?id=org.localsend.localsend_app)  
 - [Termius - SSH and SFTP Client](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client)  
-- [Weather & Widget - Weawow](https://play.google.com/store/apps/details?id=com.weawow)  
+- [Weather & Widget - Weawow](https://play.google.com/store/apps/details?id=com.weawow)
+- [Remote for Android TV](https://play.google.com/store/search?q=Remote+for+Android+TV&c=apps&hl=en_US)
 
 ---
 
@@ -91,15 +92,11 @@
 - [qBitController](https://play.google.com/store/apps/details?id=dev.bartuzen.qbitcontroller&hl=en_US)
 - [File Manager](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager&hl=en_US)
 - [Mobileraker](https://play.google.com/store/apps/details?id=com.mobileraker.android)
-
----
-
-### **Open Source & FOSS Apps**  
-- [Fennec F-Droid](https://f-droid.org/en/packages/org.mozilla.fennec_fdroid/)  
-- [Mull Browser](https://f-droid.org/en/packages/us.spotco.fennec_dos/)
+- [Romote - Open Source Roku Remote](https://play.google.com/store/apps/details?id=wseemann.media.romote&hl=en_US)
 
 ---
 
 ### **GitHub-Sourced Apps**  
 - [ReVanced Manager](https://github.com/ReVanced/revanced-manager)  
 - [Cromite](https://github.com/uazo/cromite/releases)
+- [IronFox](https://github.com/ironfox-oss/IronFox)
