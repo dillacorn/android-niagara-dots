@@ -4,6 +4,21 @@ Research notes, 2026-11-01. This is a **temporary Samsung maintenance guide**, n
 
 **Optimization principle:** Preserve functional features. Investigate unwanted consent prompts, optional advertising/personalization, and measured background activity before disabling packages. Package presence or enabled status alone is not evidence of resource consumption. Prefer reversible settings changes; avoid generic mass-debloat lists.
 
+## Selected optional One UI settings (planned, not applied)
+
+User preferences recorded 2026-11-01. **No Settings toggles have been verified or changed through this documentation update.** Exact menu labels can vary by One UI release.
+
+| Setting | Decision | Notes |
+| --- | --- | --- |
+| Galaxy Store / Samsung promotional notifications | **Opt out of promotional categories** | Keep necessary app and security update notifications; review Galaxy Store and Samsung Members categories in system notification settings |
+| Optional Samsung diagnostic data | **Disable optional sending** | Settings > Security and privacy > More privacy settings; confirm the current toggle |
+| Nearby device scanning | **Disable** | Settings > Connections > More connection settings; ordinary manual Bluetooth pairing remains possible |
+| Light performance profile | **Do not change** | Preserve current CPU/performance behavior |
+| Background usage limits | **Accept existing controls; no blanket restrictions** | Protect Tailscale, ntfy, and communications requiring background connectivity; only tune after reviewing current state |
+| Auto restart | **Turn off unattended automatic restart** | Review Device care > Auto optimization > Auto restart; system/security updates may still require restarts. Helps preserve the running Shizuku session |
+
+The first, second, third and sixth rows are **requested changes**, pending manual verification in One UI. The fifth row is not authorization to deep-sleep specific applications.
+
 ## Observed device state
 
 - Device: Galaxy S24 (`SM-S921U`). Exact One UI build/version not audited here.
