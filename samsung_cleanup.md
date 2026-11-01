@@ -9,7 +9,8 @@ Research notes, 2026-11-01. This is a **temporary Samsung maintenance guide**, n
 - Termux + Shizuku `rish` works as Android `shell` (UID 2000), including one confirmed mobile-data-only session. After a reboot or Shizuku service stop, starting Shizuku may require Wi-Fi.
 - Package inventory: 672 total, of which 179 were reported by `pm list packages -3`. These counts include nonessential system components and are **not** the list of apps to document as essentials.
 - **Confirmed modified:** `com.samsung.android.rubin.app` (Customization Service) is `disabled-user` for Android user 0, verified by `pm list packages -d --user 0` on 2026-11-01.
-- **Confirmed enabled on 2026-11-01 via `pm list packages -e --user 0`:** `com.facebook.appmanager`, `com.samsung.android.ardrawing`, `com.samsung.android.arzone`. The first Shizuku query reported `Server is not running`; a subsequent query returned these three packages successfully.
+- **Confirmed enabled on 2026-11-01 via `pm list packages -e --user 0`:** `com.facebook.appmanager`. The initial audit also found `com.samsung.android.ardrawing` and `com.samsung.android.arzone` enabled; both were subsequently disabled (see next line). The first Shizuku query reported `Server is not running`; a subsequent query succeeded.
+- **Confirmed modified on 2026-11-01:** `com.samsung.android.ardrawing` and `com.samsung.android.arzone` both reported `disabled-user` and passed separate `pm list packages -d --user 0` checks. Normal camera behavior after these changes has not yet been tested.
 - **Not established:** Whether disabling Customization Service stops recurring Samsung consent/policy dialogs; actual dialogs have not been identified. An enabled package is not proof of a continuously running service.
 
 ## Candidate packages and consequences
@@ -17,8 +18,8 @@ Research notes, 2026-11-01. This is a **temporary Samsung maintenance guide**, n
 | Package | Status in supplied inventory | Purpose / cost of disabling | Priority |
 | --- | --- | --- | --- |
 | `com.samsung.android.rubin.app` | **Confirmed disabled** | Samsung personalization; leave disabled if optional personalized features are unwanted. This is not a mandatory agreement bypass. | Done |
-| `com.samsung.android.arzone` | **Enabled, confirmed** | AR Zone hub; loses AR camera extras, avatars and stickers. Keep if used. | Low-risk trial if unused |
-| `com.samsung.android.ardrawing` | **Enabled, confirmed** | AR Doodle; loses camera drawing effects. Keep if used. | Low-risk trial if unused |
+| `com.samsung.android.arzone` | **Confirmed disabled** | AR Zone hub; loses AR camera extras, avatars and stickers. Re-enable if used. | Done; runtime test pending |
+| `com.samsung.android.ardrawing` | **Confirmed disabled** | AR Doodle; loses camera drawing effects. Re-enable if used. | Done; runtime test pending |
 | `com.facebook.appmanager` | **Enabled, confirmed** | Meta's preinstalled update helper; disabling can stop that update channel. Normal Play Store updates generally remain available. | Optional trial after confirming preferred update path |
 | `com.samsung.android.app.spage` | Not listed among enabled candidates; disabled/absent unknown | Samsung News / former Samsung Free feed; may stop its feed content. Niagara is the active launcher. | Check presence first |
 | `com.samsung.android.app.tips` | Not listed among enabled candidates; disabled/absent unknown | Samsung Tips; may generate feature suggestions after setup or updates. | Check presence first; relevant to unwanted prompts |
