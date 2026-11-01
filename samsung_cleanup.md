@@ -2,6 +2,8 @@
 
 Research notes, 2026-11-01. This is a **temporary Samsung maintenance guide**, not the planned GrapheneOS configuration. No automatic debloat script is provided.
 
+**Optimization principle:** Preserve functional features. Investigate unwanted consent prompts, optional advertising/personalization, and measured background activity before disabling packages. Package presence or enabled status alone is not evidence of resource consumption. Prefer reversible settings changes; avoid generic mass-debloat lists.
+
 ## Observed device state
 
 - Device: Galaxy S24 (`SM-S921U`). Exact One UI build/version not audited here.
@@ -9,8 +11,8 @@ Research notes, 2026-11-01. This is a **temporary Samsung maintenance guide**, n
 - Termux + Shizuku `rish` works as Android `shell` (UID 2000), including one confirmed mobile-data-only session. After a reboot or Shizuku service stop, starting Shizuku may require Wi-Fi.
 - Package inventory: 672 total, of which 179 were reported by `pm list packages -3`. These counts include nonessential system components and are **not** the list of apps to document as essentials.
 - **Confirmed modified:** `com.samsung.android.rubin.app` (Customization Service) is `disabled-user` for Android user 0, verified by `pm list packages -d --user 0` on 2026-11-01.
-- **Confirmed enabled on 2026-11-01 via `pm list packages -e --user 0`:** `com.facebook.appmanager`. The initial audit also found `com.samsung.android.ardrawing` and `com.samsung.android.arzone` enabled; both were subsequently disabled (see next line). The first Shizuku query reported `Server is not running`; a subsequent query succeeded.
-- **Confirmed modified on 2026-11-01:** `com.samsung.android.ardrawing` and `com.samsung.android.arzone` both reported `disabled-user` and passed separate `pm list packages -d --user 0` checks. Normal camera behavior after these changes has not yet been tested.
+- **Confirmed enabled on 2026-11-01 via `pm list packages -e --user 0`:** `com.facebook.appmanager`. The first Shizuku query reported `Server is not running`; a subsequent query succeeded.
+- **AR feature history, 2026-11-01:** `com.samsung.android.ardrawing` and `com.samsung.android.arzone` were temporarily disabled and passed `pm list packages -d --user 0` checks. They were subsequently **re-enabled** and each passed `pm list packages -e --user 0` checks. This preserves functionality; no performance benefit from disabling them was established.
 - **Not established:** Whether disabling Customization Service stops recurring Samsung consent/policy dialogs; actual dialogs have not been identified. An enabled package is not proof of a continuously running service.
 
 ## Candidate packages and consequences
@@ -18,8 +20,8 @@ Research notes, 2026-11-01. This is a **temporary Samsung maintenance guide**, n
 | Package | Status in supplied inventory | Purpose / cost of disabling | Priority |
 | --- | --- | --- | --- |
 | `com.samsung.android.rubin.app` | **Confirmed disabled** | Samsung personalization; leave disabled if optional personalized features are unwanted. This is not a mandatory agreement bypass. | Done |
-| `com.samsung.android.arzone` | **Confirmed disabled** | AR Zone hub; loses AR camera extras, avatars and stickers. Re-enable if used. | Done; runtime test pending |
-| `com.samsung.android.ardrawing` | **Confirmed disabled** | AR Doodle; loses camera drawing effects. Re-enable if used. | Done; runtime test pending |
+| `com.samsung.android.arzone` | **Confirmed enabled (restored)** | AR Zone hub; keep for AR camera extras, avatars and stickers. | Preserve |
+| `com.samsung.android.ardrawing` | **Confirmed enabled (restored)** | AR Doodle; keep for AR camera drawing effects. | Preserve |
 | `com.facebook.appmanager` | **Enabled, confirmed** | Meta's preinstalled update helper; disabling can stop that update channel. Normal Play Store updates generally remain available. | Optional trial after confirming preferred update path |
 | `com.samsung.android.app.spage` | Not listed among enabled candidates; disabled/absent unknown | Samsung News / former Samsung Free feed; may stop its feed content. Niagara is the active launcher. | Check presence first |
 | `com.samsung.android.app.tips` | Not listed among enabled candidates; disabled/absent unknown | Samsung Tips; may generate feature suggestions after setup or updates. | Check presence first; relevant to unwanted prompts |
@@ -72,7 +74,7 @@ With Shizuku running, copy this into Termux to check exactly which candidates ex
 4. Confirm with `rish -c 'pm list packages -d --user 0'`; test relevant UI, camera, calling, messaging, notifications and update paths after the change.
 5. Roll back with `rish -c 'pm enable --user 0 PACKAGE'` if anything breaks. **Do not** use `pm uninstall`, `pm clear`, or a mass-disable script for this project.
 
-**No performance improvement is claimed from these changes.** Disable candidates to remove unneeded features, background integrations or notifications; compare battery/performance separately if that is the goal.
+**No performance improvement is claimed from these changes.** Prefer disabling verified unwanted personalization or promotional behavior and measuring background resource use before attempting additional changes. The AR features were restored explicitly to avoid sacrificing functionality.
 
 ## References
 
