@@ -13,7 +13,7 @@ Minimal Niagara Launcher and Android setup instructions, with **Samsung One UI**
 
 | Device software | Follow these directions |
 | --- | --- |
-| **Samsung One UI (current)** | Follow [Samsung One UI cleanup](samsung_cleanup.md) for optional notification, privacy, nearby-device and restart controls, plus an optional Shizuku command for Samsung personalization. |
+| **Samsung One UI (current)** | Follow [Samsung One UI cleanup](samsung_cleanup.md) for optional notification, nearby-device and restart controls, plus a reversible Shizuku command for an unwanted Samsung service. |
 | **GrapheneOS (future)** | Follow [GrapheneOS setup](grapheneos_setup.md) for the few platform-specific setup and compatibility checks. Do **not** apply Samsung-only package commands or settings. |
 
 Only maintain a platform-specific step when it genuinely differs from the shared Android setup. Keep setup instructions practical rather than recording individual device states, preference checklists or troubleshooting history.
