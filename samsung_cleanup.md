@@ -51,14 +51,6 @@ rish -c 'pm enable --user 0 com.samsung.android.rubin.app'
 
 If Shizuku reports **Server is not running**, start it from the Shizuku app first. Non-root startup may need Wi-Fi, especially after rebooting. Do not enable unencrypted legacy ADB TCP mode just for this guide.
 
-## 6. Optional: reduce Google advertising data sharing
-
-1. Open **Settings > Google > All services > Ads > Ads privacy**.
-2. Turn off **Ad topics**, **App-suggested ads** and **Ad measurement** if available.
-3. Under **Ads**, optionally choose **Delete advertising ID**.
-
-These controls reduce certain ad-related identifiers and data sharing; they do not guarantee that ads disappear or affect advertising identifiers maintained separately by individual apps.
-
 ## Preserve features and background connectivity
 
 - Leave **AR Zone**, **AR Doodle**, camera components, **Good Lock**, Galaxy Store, Samsung Account, security services, and system updates enabled unless a specific unwanted behavior has been identified.
@@ -70,6 +62,4 @@ These controls reduce certain ad-related identifiers and data sharing; they do n
 ## Sources
 
 - [Samsung: Security and privacy settings](https://www.samsung.com/us/support/answer/ANS10002544/)
-- [Google: Android ad privacy settings](https://support.google.com/android/answer/13720755)
-- [Google: Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248)
 - [Android: ADB package manager commands](https://developer.android.com/tools/adb)
