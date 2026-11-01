@@ -10,6 +10,14 @@ Optional, reversible steps for reducing unwanted Samsung notifications, backgrou
 4. Turn off **Offers and events** and other promotional categories. **Keep app-update and important service notifications enabled.**
 5. Repeat for **Samsung Members** or other Samsung apps that send unwanted marketing notifications.
 
+## Optional: review Samsung diagnostic data collection
+
+1. Open **Settings > Security and privacy > More privacy settings > Send diagnostic data**.
+2. Read the description and linked privacy notice for the device's software version.
+3. Choose whether to leave optional diagnostic sharing **on or off**. It is not required for this cleanup.
+
+Samsung says diagnostic data can help improve Galaxy services, reliability and support. **Do not assume this data is fully anonymous.** Samsung's broader US privacy policy also describes collecting device identifiers, diagnostic logs and usage details; it does not establish that all data sent through this toggle is anonymous. Sharing a pseudonymous identifier is not the same as sharing anonymized data. This guide does not prescribe a setting or disable general advertising and analytics collection.
+
 ## 2. Turn off nearby device scanning
 
 1. Open **Settings > Connections > More connection settings**.
@@ -56,4 +64,7 @@ If Shizuku reports **Server is not running**, start it from the Shizuku app firs
 ## Sources
 
 - [Samsung: Security and privacy settings](https://www.samsung.com/us/support/answer/ANS10002544/)
+- [Samsung: Diagnostic data setting and its purpose](https://www.samsung.com/us/support/answer/ANS10002544/)
+- [Samsung: Mobile terms and diagnostic data](https://www.samsung.com/us/support/legal/LGL10000282/)
+- [Samsung: US privacy policy](https://www.samsung.com/us/account/privacy-policy/)
 - [Android: ADB package manager commands](https://developer.android.com/tools/adb)
