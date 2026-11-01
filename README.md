@@ -1,10 +1,15 @@
 # android-niagara-dots
 
-Minimal Niagara Launcher setup and essential Android application notes, with a future GrapheneOS device as the target. Current test device is a Samsung Galaxy S24; avoid treating its One UI components as migration requirements.
+A minimal Niagara Launcher and Android app setup guide, with portability to GrapheneOS as the long-term goal.
 
-- Niagara: keep a mostly stock configuration; existing `.nlb` backup files remain unchanged.
-- Preferred Android browser: **Firefox**.
-- [App catalog](apps_installed_list.md): historical list, not yet reduced to confirmed essentials.
-- [Samsung One UI cleanup](samsung_cleanup.md): researched, reversible S24-specific service optimization and audit history.
+## Setup
 
-Only add essential applications to the eventual GrapheneOS list after confirming actual use. Avoid publishing personal app configuration, authentication details or unreviewed launcher backups.
+1. Install [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher) and start with its default, minimal layout.
+2. Use [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) as the primary browser.
+3. Review the [app catalog](apps_installed_list.md) when selecting apps. It is a legacy list pending a shorter, essentials-only replacement.
+4. On Samsung devices, follow the optional [One UI cleanup instructions](samsung_cleanup.md) to reduce marketing, personalization, and unnecessary interruptions while preserving useful features.
+5. For a future GrapheneOS device, verify app compatibility and migrate a **locally reviewed** Niagara backup. Do not apply Samsung-only instructions to GrapheneOS.
+
+## Backups
+
+The existing Niagara `.nlb` backup files are retained without changes. Before exporting new backups to a public repository, inspect them for personal configuration or other sensitive data.
