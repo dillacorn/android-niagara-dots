@@ -9,20 +9,21 @@ Research notes, 2026-11-01. This is a **temporary Samsung maintenance guide**, n
 - Termux + Shizuku `rish` works as Android `shell` (UID 2000), including one confirmed mobile-data-only session. After a reboot or Shizuku service stop, starting Shizuku may require Wi-Fi.
 - Package inventory: 672 total, of which 179 were reported by `pm list packages -3`. These counts include nonessential system components and are **not** the list of apps to document as essentials.
 - **Confirmed modified:** `com.samsung.android.rubin.app` (Customization Service) is `disabled-user` for Android user 0, verified by `pm list packages -d --user 0` on 2026-11-01.
-- **Not established:** Whether that change stops the recurring Samsung consent/policy dialogs; actual dialogs have not been identified.
+- **Confirmed enabled on 2026-11-01 via `pm list packages -e --user 0`:** `com.facebook.appmanager`, `com.samsung.android.ardrawing`, `com.samsung.android.arzone`. The first Shizuku query reported `Server is not running`; a subsequent query returned these three packages successfully.
+- **Not established:** Whether disabling Customization Service stops recurring Samsung consent/policy dialogs; actual dialogs have not been identified. An enabled package is not proof of a continuously running service.
 
 ## Candidate packages and consequences
 
 | Package | Status in supplied inventory | Purpose / cost of disabling | Priority |
 | --- | --- | --- | --- |
 | `com.samsung.android.rubin.app` | **Confirmed disabled** | Samsung personalization; leave disabled if optional personalized features are unwanted. This is not a mandatory agreement bypass. | Done |
-| `com.samsung.android.arzone` | Present | AR Zone hub; loses AR camera extras, avatars and stickers. Keep if used. | Low-risk trial if unused |
-| `com.samsung.android.ardrawing` | Present | AR Doodle; loses camera drawing effects. Keep if used. | Low-risk trial if unused |
-| `com.facebook.appmanager` | Present | Meta's preinstalled update helper; disabling can stop that update channel. Normal Play Store updates generally remain available. | Optional trial after confirming preferred update path |
-| `com.samsung.android.app.spage` | **Not checked** | Samsung News / former Samsung Free feed; may stop its feed content. Niagara is the active launcher. | Check presence first |
-| `com.samsung.android.app.tips` | **Not checked** | Samsung Tips; may generate feature suggestions after setup or updates. | Check presence first; relevant to unwanted prompts |
-| `com.samsung.android.voc` | **Not checked** | Samsung Members; loses community, diagnostics and error-report UI. | Check presence first |
-| `com.samsung.android.game.gamehome` | **Not checked** | Gaming Hub; affects game library and may affect Game Booster. | Only if unused |
+| `com.samsung.android.arzone` | **Enabled, confirmed** | AR Zone hub; loses AR camera extras, avatars and stickers. Keep if used. | Low-risk trial if unused |
+| `com.samsung.android.ardrawing` | **Enabled, confirmed** | AR Doodle; loses camera drawing effects. Keep if used. | Low-risk trial if unused |
+| `com.facebook.appmanager` | **Enabled, confirmed** | Meta's preinstalled update helper; disabling can stop that update channel. Normal Play Store updates generally remain available. | Optional trial after confirming preferred update path |
+| `com.samsung.android.app.spage` | Not listed among enabled candidates; disabled/absent unknown | Samsung News / former Samsung Free feed; may stop its feed content. Niagara is the active launcher. | Check presence first |
+| `com.samsung.android.app.tips` | Not listed among enabled candidates; disabled/absent unknown | Samsung Tips; may generate feature suggestions after setup or updates. | Check presence first; relevant to unwanted prompts |
+| `com.samsung.android.voc` | Not listed among enabled candidates; disabled/absent unknown | Samsung Members; loses community, diagnostics and error-report UI. | Check presence first |
+| `com.samsung.android.game.gamehome` | Not listed among enabled candidates; disabled/absent unknown | Gaming Hub; affects game library and may affect Game Booster. | Only if unused |
 
 `com.samsung.android.goodlock` and modules such as `com.samsung.android.app.homestar`, `com.samsung.systemui.navillera`, `com.samsung.systemui.lockstar`, `com.samsung.android.app.goodcatch`, `com.samsung.android.qstuner`, and `com.samsung.android.app.cameraassistant` are present. They are **not** part of the default disable list: check actual use before changing them. Bixby/translation language packs are also user-feature dependent.
 
