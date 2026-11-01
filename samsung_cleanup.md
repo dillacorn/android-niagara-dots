@@ -1,106 +1,75 @@
-# Samsung One UI cleanup: Galaxy S24
+# Samsung One UI cleanup
 
-Research notes, 2026-11-01. This is a **temporary Samsung maintenance guide**, not the planned GrapheneOS configuration. No automatic debloat script is provided.
+Optional, reversible steps for reducing unwanted promotions, personalization and interruptions on a Samsung Galaxy phone. **Preserve normal camera, communications, security, update and gaming features.** Menu labels may differ by One UI version.
 
-**Optimization principle:** Preserve functional features. Investigate unwanted consent prompts, optional advertising/personalization, and measured background activity before disabling packages. Package presence or enabled status alone is not evidence of resource consumption. Prefer reversible settings changes; avoid generic mass-debloat lists.
+## 1. Remove promotional notifications
 
-## Selected optional One UI settings (completed; user-confirmed)
+1. Open **Settings > Notifications > Advanced settings**.
+2. Enable **Manage notification categories for each app**, if available.
+3. Open **Settings > Apps > Galaxy Store > Notifications > Notification categories** (or open Galaxy Store's notification settings).
+4. Turn off **Offers and events** and other promotional categories. **Keep app-update and important service notifications enabled.**
+5. Repeat for **Samsung Members** or other Samsung apps that send unwanted marketing notifications.
 
-**Completed and verified on the Galaxy S24 by the user on 2026-11-01.** These are user-reported confirmations, not independent device-state checks or changes made through GitHub. Exact menu labels can vary by One UI release.
+## 2. Turn off optional diagnostic sharing
 
-| Setting | Status | Notes |
-| --- | --- | --- |
-| Galaxy Store / Samsung promotional notifications | **Completed (user-confirmed)** | Promotional categories disabled; important app and security update notifications preserved |
-| Optional Samsung diagnostic data | **Completed (user-confirmed)** | Optional diagnostic sharing turned off via Security and privacy settings |
-| Nearby device scanning | **Completed (user-confirmed)** | Nearby device scanning turned off; regular Bluetooth functionality retained |
-| Light performance profile | **Do not change** | Preserve current CPU/performance behavior |
-| Background usage limits | **Accept existing controls; no blanket restrictions** | Protect Tailscale, ntfy, and communications requiring background connectivity; only tune after reviewing current state |
-| Auto restart | **Completed (user-confirmed)** | Unattended auto-restart options turned off; system/security update restarts may still occur. Helps preserve the running Shizuku session |
+1. Open **Settings > Security and privacy > More privacy settings**.
+2. Find **Send diagnostic data** under Samsung privacy settings.
+3. Turn off **optional** diagnostic reporting. Leave essential security functionality intact.
 
-The first, second, third and sixth rows were applied and verified by the user. The Light performance profile and background usage limits were intentionally left unchanged; this is not authorization to deep-sleep specific applications.
+## 3. Turn off nearby device scanning
 
-## Observed device state
+1. Open **Settings > Connections > More connection settings**.
+2. Turn off **Nearby device scanning**.
 
-- Device: Galaxy S24 (`SM-S921U`). Exact One UI build/version not audited here.
-- Launcher: Niagara (`bitpit.launcher`); preserve its largely stock configuration.
-- Termux + Shizuku `rish` works as Android `shell` (UID 2000), including one confirmed mobile-data-only session. After a reboot or Shizuku service stop, starting Shizuku may require Wi-Fi.
-- Package inventory: 672 total, of which 179 were reported by `pm list packages -3`. These counts include nonessential system components and are **not** the list of apps to document as essentials.
-- **Confirmed modified:** `com.samsung.android.rubin.app` (Customization Service) is `disabled-user` for Android user 0, verified by `pm list packages -d --user 0` on 2026-11-01.
-- **Confirmed enabled on 2026-11-01 via `pm list packages -e --user 0`:** `com.facebook.appmanager`. The first Shizuku query reported `Server is not running`; a subsequent query succeeded.
-- **AR feature history, 2026-11-01:** `com.samsung.android.ardrawing` and `com.samsung.android.arzone` were temporarily disabled and passed `pm list packages -d --user 0` checks. They were subsequently **re-enabled** and each passed `pm list packages -e --user 0` checks. This preserves functionality; no performance benefit from disabling them was established.
-- **Not established:** Whether disabling Customization Service stops recurring Samsung consent/policy dialogs; actual dialogs have not been identified. An enabled package is not proof of a continuously running service.
+This reduces unsolicited nearby-device discovery prompts. Manual Bluetooth pairing remains available.
 
-## Candidate packages and consequences
+## 4. Stop unattended maintenance restarts
 
-| Package | Status in supplied inventory | Purpose / cost of disabling | Priority |
-| --- | --- | --- | --- |
-| `com.samsung.android.rubin.app` | **Confirmed disabled** | Samsung personalization; leave disabled if optional personalized features are unwanted. This is not a mandatory agreement bypass. | Done |
-| `com.samsung.android.arzone` | **Confirmed enabled (restored)** | AR Zone hub; keep for AR camera extras, avatars and stickers. | Preserve |
-| `com.samsung.android.ardrawing` | **Confirmed enabled (restored)** | AR Doodle; keep for AR camera drawing effects. | Preserve |
-| `com.facebook.appmanager` | **Enabled, confirmed** | Meta's preinstalled update helper; disabling can stop that update channel. Normal Play Store updates generally remain available. | Optional trial after confirming preferred update path |
-| `com.samsung.android.app.spage` | Not listed among enabled candidates; disabled/absent unknown | Samsung News / former Samsung Free feed; may stop its feed content. Niagara is the active launcher. | Check presence first |
-| `com.samsung.android.app.tips` | Not listed among enabled candidates; disabled/absent unknown | Samsung Tips; may generate feature suggestions after setup or updates. | Check presence first; relevant to unwanted prompts |
-| `com.samsung.android.voc` | Not listed among enabled candidates; disabled/absent unknown | Samsung Members; loses community, diagnostics and error-report UI. | Check presence first |
-| `com.samsung.android.game.gamehome` | Not listed among enabled candidates; disabled/absent unknown | Gaming Hub; affects game library and may affect Game Booster. | Only if unused |
+1. Open **Settings > Device care > Auto optimization > Auto restart**.
+2. Turn off **Restart when needed** and **Restart on schedule** where available.
 
-`com.samsung.android.goodlock` and modules such as `com.samsung.android.app.homestar`, `com.samsung.systemui.navillera`, `com.samsung.systemui.lockstar`, `com.samsung.android.app.goodcatch`, `com.samsung.android.qstuner`, and `com.samsung.android.app.cameraassistant` are present. They are **not** part of the default disable list: check actual use before changing them. Bixby/translation language packs are also user-feature dependent.
+System and security updates can still require a reboot. Do not disable updates to prevent restarts.
 
-## Preserve
+## 5. Disable optional Samsung personalization (advanced, reversible)
 
-Keep `com.osp.app.signin` (Samsung Account), `com.samsung.android.mobileservice` (Samsung Experience Service), and `com.sec.android.app.samsungapps` (Galaxy Store). These were confirmed enabled on 2026-11-01. Do not indiscriminately disable telephony/IMS/RCS, Android System UI, permission controller, Knox/Secure Folder, OTA/update, connectivity, camera providers, payment, or authentication services. In particular, arbitrary Samsung debloat lists can break camera functions, profiles, or system components.
+If you don't use Samsung's **Customization Service**, first disable it from Samsung Account privacy settings if that option is available. For a package-level alternative, use **Termux with a running Shizuku server**. This affects personalization functionality; it does **not** bypass required Samsung Account terms.
 
-## Read-only review on the phone
-
-With Shizuku running, copy this into Termux to check exactly which candidates exist and whether they are enabled. No package states change.
+Run:
 
 ```bash
-(
-    set -e
-    enabled="$(mktemp)"
-    disabled="$(mktemp)"
-    trap 'rm -f "$enabled" "$disabled"' EXIT
-    rish -c 'pm list packages -e --user 0' > "$enabled"
-    rish -c 'pm list packages -d --user 0' > "$disabled"
-    for pkg in \
-        com.samsung.android.rubin.app \
-        com.samsung.android.arzone \
-        com.samsung.android.ardrawing \
-        com.facebook.appmanager \
-        com.samsung.android.app.spage \
-        com.samsung.android.app.tips \
-        com.samsung.android.voc \
-        com.samsung.android.game.gamehome; do
-        if grep -Fxq "package:$pkg" "$enabled"; then
-            printf 'ENABLED  %s\n' "$pkg"
-        elif grep -Fxq "package:$pkg" "$disabled"; then
-            printf 'DISABLED %s\n' "$pkg"
-        else
-            printf 'NOT LISTED %s\n' "$pkg"
-        fi
-    done
-)
+rish -c 'pm disable-user --user 0 com.samsung.android.rubin.app'
+rish -c 'pm list packages -d --user 0' | grep -Fx 'package:com.samsung.android.rubin.app'
 ```
 
-## Change protocol (one package at a time)
+Expected: the command reports `disabled-user`, and the last line prints the exact package.
 
-1. Prefer the Samsung app's own opt-out / notification controls for marketing, consent and tips. Samsung Account terms can still require acceptance to use account services.
-2. Check that a candidate is present and enabled; verify whether the corresponding feature is used.
-3. Use `rish -c 'pm disable-user --user 0 PACKAGE'` only for the individually reviewed package, not as part of a broad removal list. Record the exact package and output.
-4. Confirm with `rish -c 'pm list packages -d --user 0'`; test relevant UI, camera, calling, messaging, notifications and update paths after the change.
-5. Roll back with `rish -c 'pm enable --user 0 PACKAGE'` if anything breaks. **Do not** use `pm uninstall`, `pm clear`, or a mass-disable script for this project.
+To restore personalization:
 
-**No performance improvement is claimed from these changes.** Prefer disabling verified unwanted personalization or promotional behavior and measuring background resource use before attempting additional changes. The AR features were restored explicitly to avoid sacrificing functionality.
+```bash
+rish -c 'pm enable --user 0 com.samsung.android.rubin.app'
+```
 
-## References
+If Shizuku reports **Server is not running**, start it from the Shizuku app first. Non-root startup may need Wi-Fi, especially after rebooting. Do not enable unencrypted legacy ADB TCP mode just for this guide.
 
-- [Samsung: Customization Service privacy controls](https://terms.account.samsung.com/contents/legal/us/en/customizedservicecontent.html)
-- [Samsung: opt out of ads](https://www.samsung.com/uk/support/mobile-devices/how-to-remove-ads-from-a-galaxy-smartphone/)
-- [Android Developers: ADB package manager commands](https://developer.android.com/tools/adb)
-- [Samsung: AR Zone features](https://www.samsung.com/us/support/answer/ANS10002551/)
-- [Samsung AR Zone package notes](https://mysystemapp.com/packages/com.samsung.android.arzone/)
-- [AR Doodle package notes](https://mysystemapp.com/packages/com.samsung.android.ardrawing/)
-- [Meta App Manager package notes](https://mysystemapp.com/packages/com.facebook.appmanager/)
-- [Samsung News package notes](https://mysystemapp.com/packages/com.samsung.android.app.spage/)
-- [Samsung Tips package notes](https://mysystemapp.com/packages/com.samsung.android.app.tips/)
-- [Samsung Members package notes](https://mysystemapp.com/packages/com.samsung.android.voc/)
-- [Example of risks from aggressive Samsung debloating](https://github.com/khlam/debloat-samsung-android)
+## 6. Optional: reduce Google advertising data sharing
+
+1. Open **Settings > Google > All services > Ads > Ads privacy**.
+2. Turn off **Ad topics**, **App-suggested ads** and **Ad measurement** if available.
+3. Under **Ads**, optionally choose **Delete advertising ID**.
+
+These controls reduce certain ad-related identifiers and data sharing; they do not guarantee that ads disappear or affect advertising identifiers maintained separately by individual apps.
+
+## Preserve features and background connectivity
+
+- Leave **AR Zone**, **AR Doodle**, camera components, **Good Lock**, Galaxy Store, Samsung Account, security services, and system updates enabled unless a specific unwanted behavior has been identified.
+- Avoid disabling apps solely because they appear on a debloat list. Installed or enabled packages are not automatically running or consuming meaningful battery.
+- Review **Settings > Battery > Background usage limits**, but avoid blanket deep-sleep rules for Tailscale, ntfy, messaging, authenticators and other apps requiring reliable background operation.
+- Leave performance profiles unchanged unless testing demonstrates a benefit. Do not assume disabling features improves performance.
+- If policy prompts continue, capture the actual dialog and identify its source before disabling additional system packages.
+
+## Sources
+
+- [Samsung: Security and privacy settings](https://www.samsung.com/us/support/answer/ANS10002544/)
+- [Google: Android ad privacy settings](https://support.google.com/android/answer/13720755)
+- [Google: Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248)
+- [Android: ADB package manager commands](https://developer.android.com/tools/adb)
