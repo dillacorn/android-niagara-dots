@@ -1,6 +1,6 @@
 # Samsung One UI cleanup
 
-Optional, reversible steps for reducing unwanted promotions, personalization and interruptions on a Samsung Galaxy phone. **Preserve normal camera, communications, security, update and gaming features.** Menu labels may differ by One UI version.
+Optional, reversible steps for reducing unwanted Samsung notifications, background integrations and interruptions on a Samsung Galaxy phone. **Preserve normal camera, communications, security, update and gaming features.** Menu labels may differ by One UI version.
 
 ## 1. Remove promotional notifications
 
@@ -10,27 +10,21 @@ Optional, reversible steps for reducing unwanted promotions, personalization and
 4. Turn off **Offers and events** and other promotional categories. **Keep app-update and important service notifications enabled.**
 5. Repeat for **Samsung Members** or other Samsung apps that send unwanted marketing notifications.
 
-## 2. Turn off optional diagnostic sharing
-
-1. Open **Settings > Security and privacy > More privacy settings**.
-2. Find **Send diagnostic data** under Samsung privacy settings.
-3. Turn off **optional** diagnostic reporting. Leave essential security functionality intact.
-
-## 3. Turn off nearby device scanning
+## 2. Turn off nearby device scanning
 
 1. Open **Settings > Connections > More connection settings**.
 2. Turn off **Nearby device scanning**.
 
 This reduces unsolicited nearby-device discovery prompts. Manual Bluetooth pairing remains available.
 
-## 4. Stop unattended maintenance restarts
+## 3. Stop unattended maintenance restarts
 
 1. Open **Settings > Device care > Auto optimization > Auto restart**.
 2. Turn off **Restart when needed** and **Restart on schedule** where available.
 
 System and security updates can still require a reboot. Do not disable updates to prevent restarts.
 
-## 5. Disable optional Samsung personalization (advanced, reversible)
+## 4. Disable optional Samsung Customization Service (advanced, reversible)
 
 If you don't use Samsung's **Customization Service**, first disable it from Samsung Account privacy settings if that option is available. For a package-level alternative, use **Termux with a running Shizuku server**. This affects personalization functionality; it does **not** bypass required Samsung Account terms.
 
@@ -43,7 +37,7 @@ rish -c 'pm list packages -d --user 0' | grep -Fx 'package:com.samsung.android.r
 
 Expected: the command reports `disabled-user`, and the last line prints the exact package.
 
-To restore personalization:
+To restore the service:
 
 ```bash
 rish -c 'pm enable --user 0 com.samsung.android.rubin.app'
