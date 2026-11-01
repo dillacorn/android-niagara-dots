@@ -1,5 +1,5 @@
-## **Apps I Use**  
-*This list is categorized by corporate ownership and further organized by purpose.*  
+## **Apps I Use (legacy catalog; essentials review pending)**  
+*Historical app list, not a verified current essentials list. Samsung cleanup findings are documented in [samsung_cleanup.md](samsung_cleanup.md). The current preferred Android browser is Firefox.*  
 
 ---
 
@@ -10,8 +10,12 @@
 - [Google Photos](https://play.google.com/store/apps/details?id=com.google.android.apps.photos)  
 - [Google Lens](https://play.google.com/store/apps/details?id=com.google.ar.lens)  
 - [Google Maps](https://play.google.com/store/apps/details?id=com.google.android.apps.maps)  
-- [Google Chrome](https://play.google.com/store/apps/details?id=com.android.chrome)  
 - [Gboard - Google Keyboard](https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin)  
+
+---
+
+### **Preferred Browser**  
+- [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox)  
 
 ---
 
@@ -72,7 +76,7 @@
 - [Termius - SSH and SFTP Client](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client)  
 - [Weather & Widget - Weawow](https://play.google.com/store/apps/details?id=com.weawow)
 - [Remote for Android TV](https://play.google.com/store/search?q=Remote+for+Android+TV&c=apps&hl=en_US)
-- [FUTO Keyboard](https://play.google.com/store/apps/details?id=wseemann.media.romote&hl=en_US)
+- [FUTO Keyboard](https://play.google.com/store/apps/details?id=org.futo.inputmethod.latin.playstore)
 - [FUTO Voice Input](https://play.google.com/store/apps/details?id=org.futo.voiceinput&hl=en_US)
 
 ---
@@ -89,7 +93,7 @@
 - [Tailscale](https://play.google.com/store/apps/details?id=com.tailscale.ipn&hl=en_US)
 - [WireGuard](https://play.google.com/store/apps/details?id=com.wireguard.android&hl=en_US)
 - [Immich](https://play.google.com/store/apps/details?id=app.alextran.immich)  
-- [Jellyfin for Android TV](https://play.google.com/store/apps/details?id=org.jellyfin.androidtv)
+- [Jellyfin for Android](https://play.google.com/store/apps/details?id=org.jellyfin.mobile)
 - [Symfonium: Music player & cast](https://play.google.com/store/apps/details?id=app.symfonik.music.player&hl=en_US)
 - [qBitController](https://play.google.com/store/apps/details?id=dev.bartuzen.qbitcontroller&hl=en_US)
 - [File Manager](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager&hl=en_US)
