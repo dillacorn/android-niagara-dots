@@ -32,6 +32,14 @@ This reduces unsolicited nearby-device discovery prompts. Manual Bluetooth pairi
 
 System and security updates can still require a reboot. Do not disable updates to prevent restarts.
 
+## Optional: reduce system animations
+
+1. Open **Settings > Accessibility > Vision enhancements** and enable **Reduce animations**.
+2. If Developer options are hidden, open **Settings > About phone > Software information** and tap **Build number** seven times.
+3. Open **Settings > Developer options** and set **Window animation scale**, **Transition animation scale**, and **Animator duration scale** to **Animation off**.
+
+To restore normal motion, turn off **Reduce animations** and set the three animation scales to **1x** (or the preferred values). Disabling motion can affect some app interfaces. Samsung also documents a One UI 7 Camera issue that may require turning **Reduce animations** off.
+
 ## 4. Disable optional Samsung Customization Service (advanced, reversible)
 
 If you don't use Samsung's **Customization Service**, first turn it off from Samsung Account privacy settings if the option is available. The following package-level alternative changes personalization functionality; it does **not** bypass required Samsung Account terms.
@@ -96,6 +104,7 @@ If Shizuku reports **Server is not running**, restart it as described in the [se
 
 ## Sources
 
+- [Samsung: Reduce animations and One UI 7 Camera compatibility](https://www.samsung.com/us/support/troubleshoot/TSG10005233/)
 - [Samsung: Security and privacy settings](https://www.samsung.com/us/support/answer/ANS10002544/)
 - [Samsung: Diagnostic data setting and its purpose](https://www.samsung.com/us/support/answer/ANS10002544/)
 - [Samsung: Mobile terms and diagnostic data](https://www.samsung.com/us/support/legal/LGL10000282/)
