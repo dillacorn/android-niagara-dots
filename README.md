@@ -1,24 +1,24 @@
 # android-niagara-dots
 
-Minimal Niagara Launcher and Android setup instructions, with **Samsung One UI** as the current setup and **GrapheneOS** as an alternative device setup. Most steps are shared; only platform-specific changes belong in their respective guides.
+Repeatable Android setup directions using Niagara Launcher. Follow the shared steps first, then the instructions for the device's operating system. Samsung One UI has additional manual cleanup steps; GrapheneOS needs only the steps that differ from standard Android.
 
 ## Shared Android setup
 
-1. Install [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher), set it as the default home app, and keep its standard minimal layout.
+1. Install [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher), set it as the default home app, and use its standard minimal layout.
 2. Install [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) and set it as the default browser.
-3. Install any additional essential apps you use; avoid copying every preinstalled app or third-party package from a previous device.
-4. Restore a **locally reviewed** Niagara `.nlb` backup only if needed. Check favorite apps, widgets and shortcuts after restoring.
+3. Set up only the applications needed for the device's intended use. Follow the [app setup checks](apps_installed_list.md) rather than reinstalling an entire app list from an older phone.
+4. Restore a **locally reviewed** Niagara `.nlb` backup only if needed. Verify favorites, widgets and shortcuts after restoring.
 
-## Choose your device setup
+## Device-specific directions
 
-| Device software | Follow these directions |
+| Operating system | Follow these directions |
 | --- | --- |
-| **Samsung One UI (current)** | Follow [Samsung One UI cleanup](samsung_cleanup.md) for optional notification, nearby-device and restart controls, plus a reversible Shizuku command for an unwanted Samsung service. |
-| **GrapheneOS (future)** | Follow [GrapheneOS setup](grapheneos_setup.md) for the few platform-specific setup and compatibility checks. Do **not** apply Samsung-only package commands or settings. |
+| **Samsung One UI** | Follow [Samsung One UI cleanup](samsung_cleanup.md) for optional notification, nearby-device and restart controls, plus a reversible Shizuku command for an unwanted Samsung service. |
+| **GrapheneOS** | Follow [GrapheneOS setup](grapheneos_setup.md) for platform-specific setup and compatibility checks. Do **not** apply Samsung-only package commands or settings. |
 
-Only maintain a platform-specific step when it genuinely differs from the shared Android setup. Keep setup instructions practical rather than recording individual device states, preference checklists or troubleshooting history.
+Keep shared Android steps here. Document platform-specific steps only when they actually differ. Describe what to do and how to verify it, not the state of one person's phone.
 
-## Application list and backups
+## Niagara backups
 
-- [App catalog](apps_installed_list.md) is an older, **unreviewed** list. It should be reduced to essential app installation directions rather than used as an automatic migration checklist.
-- Existing Niagara `.nlb` backups are retained unchanged. Review backups for sensitive data before publishing replacements in this public repository.
+- Existing `.nlb` backups are optional restore files, not application recommendations or a record of a device's expected configuration.
+- Review backups locally for personal data, installed-app references, widgets, shortcuts and account details before publishing updated copies in this public repository.
