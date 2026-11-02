@@ -22,7 +22,7 @@
 ### **Meta (Facebook) Apps**  
 - [Facebook](https://play.google.com/store/search?q=facebook&c=apps)  
 - [Messenger](https://play.google.com/store/apps/details?id=com.facebook.orca)  
-- [Instagram (via ReVanced)](https://play.google.com/store/apps/details?id=com.instagram.android)  
+- [Instagram](https://play.google.com/store/apps/details?id=com.instagram.android)  
 
 ---
 
@@ -60,10 +60,10 @@
 ### **Media & Entertainment Apps**  
 - [Spotify](https://play.google.com/store/apps/details?id=com.spotify.music)  
 - [Shazam](https://play.google.com/store/apps/details?id=com.shazam.android)  
-- [YouTube (via ReVanced)](https://play.google.com/store/apps/details?id=com.google.android.youtube)  
-- [Reddit (via ReVanced)](https://play.google.com/store/apps/details?id=com.reddit.frontpage)  
-- [Twitch (via ReVanced)](https://play.google.com/store/apps/details?id=tv.twitch.android.app)  
-- [TikTok (via ReVanced)](https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically)  
+- [YouTube](https://play.google.com/store/apps/details?id=com.google.android.youtube)  
+- [Reddit](https://play.google.com/store/apps/details?id=com.reddit.frontpage)  
+- [Twitch](https://play.google.com/store/apps/details?id=tv.twitch.android.app)  
+- [TikTok](https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically)  
 
 ---
 
@@ -103,6 +103,5 @@
 ---
 
 ### **GitHub-Sourced Apps**  
-- [ReVanced Manager](https://github.com/ReVanced/revanced-manager)  
 - [Cromite](https://github.com/uazo/cromite/releases)
 - [IronFox](https://github.com/ironfox-oss/IronFox)
