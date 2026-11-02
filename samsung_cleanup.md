@@ -34,24 +34,44 @@ System and security updates can still require a reboot. Do not disable updates t
 
 ## 4. Disable optional Samsung Customization Service (advanced, reversible)
 
-If you don't use Samsung's **Customization Service**, first disable it from Samsung Account privacy settings if that option is available. For a package-level alternative, use **Termux with a running Shizuku server**. This affects personalization functionality; it does **not** bypass required Samsung Account terms.
+If you don't use Samsung's **Customization Service**, first turn it off from Samsung Account privacy settings if the option is available. The following package-level alternative changes personalization functionality; it does **not** bypass required Samsung Account terms.
 
-Run:
+Follow [Shizuku and ADB setup](guides/shizuku_adb.md) first, then use **one** of the following methods. Verify the exact package exists before disabling it.
 
-```bash
+**On the phone (Termux + Shizuku/rish):**
+
+```sh
+rish -c 'pm path com.samsung.android.rubin.app'
 rish -c 'pm disable-user --user 0 com.samsung.android.rubin.app'
 rish -c 'pm list packages -d --user 0' | grep -Fx 'package:com.samsung.android.rubin.app'
 ```
 
+**From a computer (ADB alternative):**
+
+```sh
+adb devices -l
+adb shell pm path com.samsung.android.rubin.app
+adb shell pm disable-user --user 0 com.samsung.android.rubin.app
+adb shell pm list packages -d --user 0 com.samsung.android.rubin.app
+```
+
+Before running ADB changes, verify the connected device. If more than one device is listed, target the intended serial with `adb -s SERIAL shell ...` as described in the setup guide.
+
 Expected: the command reports `disabled-user`, and the last line prints the exact package.
 
-To restore the service:
+To restore the service, use the same method used to disable it:
 
-```bash
+```sh
 rish -c 'pm enable --user 0 com.samsung.android.rubin.app'
 ```
 
-If Shizuku reports **Server is not running**, start it from the Shizuku app first. Non-root startup may need Wi-Fi, especially after rebooting. Do not enable unencrypted legacy ADB TCP mode just for this guide.
+Or, from the connected computer:
+
+```sh
+adb shell pm enable --user 0 com.samsung.android.rubin.app
+```
+
+If Shizuku reports **Server is not running**, restart it as described in the [setup guide](guides/shizuku_adb.md). Do not enable unencrypted legacy ADB TCP mode just for this guide.
 
 ## Preserve features and background connectivity
 
