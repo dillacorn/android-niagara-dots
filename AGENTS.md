@@ -15,7 +15,7 @@ This is a **short Android settings and configuration guide**, not an inventory o
 ## Documentation style
 
 - Keep `README.md` a small link index; detailed steps belong in focused pages.
-- Prefer short headings, numbered steps, exact menu paths and copy-ready commands.
+- Format user-facing directions as **Setting path → value** or **Check → command → verify → restore**. No prose introductions, changelog/release-note narration, personal rationale, or explanatory paragraphs unless necessary to use the procedure safely.
 - Explain **what to change**, not the maintainer's current settings or why a preference is popular.
 - Label optional/advanced steps. Include a concise check and reversal wherever a change can affect system behavior.
 - Do not repeat warnings, introductions, sources, or the same setup procedure across pages. Link to the owner page instead.
