@@ -1,42 +1,38 @@
-# Samsung One UI cleanup
+# Samsung One UI settings
 
-Optional settings. Menu paths vary by One UI version.
+All steps optional. Menu names may vary by One UI version.
 
-## Promotional notifications
+## Notifications
 
-1. **Settings > Notifications > Advanced settings:** enable **Manage notification categories for each app**.
-2. **Settings > Apps > Galaxy Store > Notifications > Notification categories:** turn off **Offers and events**. Keep update/service alerts.
-3. Repeat for **Samsung Members** if it sends unwanted promotions.
+1. **Settings > Notifications > Advanced settings** → Enable **Manage notification categories for each app**.
+2. **Settings > Apps > Galaxy Store > Notifications > Notification categories** → Disable **Offers and events**; keep update alerts.
+3. **Samsung Members > Notifications** → Disable promotional categories if present.
 
-## Nearby scanning
+## Nearby device scanning
 
-**Settings > Connections > More connection settings:** turn off **Nearby device scanning** if unused. Manual Bluetooth pairing remains available.
+**Settings > Connections > More connection settings > Nearby device scanning** → Off.
 
 ## Automatic restarts
 
-**Settings > Device care > Auto optimization > Auto restart:** turn off **Restart when needed** and **Restart on schedule**, if present. Continue installing system updates.
+**Settings > Device care > Auto optimization > Auto restart** → Disable **Restart when needed** and **Restart on schedule**, if available.
 
-## Animations (optional)
+## Animations
 
-1. **Settings > Accessibility > Vision enhancements:** enable **Reduce animations**.
-2. **Settings > Developer options:** set **Window animation scale**, **Transition animation scale**, and **Animator duration scale** to **Animation off**.
+- **Settings > Accessibility > Vision enhancements > Reduce animations** → On.
+- **Settings > Developer options** → **Window animation scale**, **Transition animation scale**, **Animator duration scale** → Off.
 
-To reveal Developer options, tap **Build number** seven times under **About phone > Software information**. Undo: turn off **Reduce animations** and restore the scales to **1x**. If One UI 7 Camera has problems, try disabling **Reduce animations**.
+Developer options: **About phone > Software information > Build number** (tap 7 times). Undo: **Reduce animations** Off; scales **1x**. If Camera malfunctions, try disabling **Reduce animations**.
 
-## Diagnostic sharing (optional)
+## Diagnostic data
 
-**Settings > Security and privacy > More privacy settings > Send diagnostic data:** review and choose on/off. Diagnostic information may contain identifiers and logs; do not assume it is anonymous.
+**Settings > Security and privacy > More privacy settings > Send diagnostic data** → Review optional sharing. It may contain device identifiers.
 
-## Customization Service (advanced, optional)
+## Customization Service (advanced)
 
-For unwanted Samsung personalization, first check Samsung Account privacy settings. Alternatively, follow the [reversible Shizuku/ADB procedure](guides/samsung_customization_service.md).
+[Optional disable and restore commands](guides/samsung_customization_service.md).
 
-## Preserve system functions
+## Background limits
 
-- Do not disable camera, security, updates, or other system packages based only on generic debloat lists.
-- Under **Settings > Battery > Background usage limits**, avoid sleeping services that must stay connected.
+**Settings > Battery > Background usage limits** → Keep services needing background connectivity out of sleep lists.
 
-## Sources
-
-- [Samsung: Reduce animations and Camera compatibility](https://www.samsung.com/us/support/troubleshoot/TSG10005233/)
-- [Samsung: Privacy policy](https://www.samsung.com/us/account/privacy-policy/)
+Sources: [Samsung animation compatibility](https://www.samsung.com/us/support/troubleshoot/TSG10005233/) · [Samsung privacy policy](https://www.samsung.com/us/account/privacy-policy/)
