@@ -5,7 +5,7 @@ Use this guide **only on a supported device running GrapheneOS**. The shared lau
 ## Install and set up
 
 1. Confirm that your device is supported using the [official GrapheneOS installation guide](https://grapheneos.org/install/). Follow the official installer instructions for the exact device; do not use Samsung firmware or ADB package-disabling instructions.
-2. After initial setup, follow the [shared Android setup](README.md#shared-android-setup) to configure Niagara as your default launcher.
+2. After initial setup, follow the [Niagara setup](README.md#start-with-niagara) to configure Niagara as your default launcher.
 3. If a required function depends on Google Play services, review [GrapheneOS's sandboxed Google Play guidance](https://grapheneos.org/usage#sandboxed-google-play). Configure sandboxed Google Play only when needed for that function.
 4. Test device functions that matter to the setup, such as notifications, calls, messaging, and NFC. Where relevant, verify compatibility requirements before retiring a previous device.
 5. Restore a locally reviewed Niagara backup only if desired; manually verify widgets and shortcuts.
