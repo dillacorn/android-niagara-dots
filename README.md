@@ -4,10 +4,8 @@ Repeatable Android setup directions using Niagara Launcher. Follow the shared st
 
 ## Shared Android setup
 
-1. Install [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher), set it as the default home app, and use its standard minimal layout.
-2. Install [Firefox](https://play.google.com/store/apps/details?id=org.mozilla.firefox) and set it as the default browser.
-3. Set up only the applications needed for the device's intended use. Follow the [app setup checks](apps_installed_list.md) rather than reinstalling an entire app list from an older phone.
-4. Restore a **locally reviewed** Niagara `.nlb` backup only if needed. Verify favorites, widgets and shortcuts after restoring.
+1. Install [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher) and set it as the default home app.
+2. Configure the launcher layout and restore a **locally reviewed** Niagara `.nlb` backup only if needed. Verify favorites, widgets and shortcuts after restoring.
 
 ## Device-specific directions
 
@@ -16,7 +14,7 @@ Repeatable Android setup directions using Niagara Launcher. Follow the shared st
 | **Samsung One UI** | Follow [Samsung One UI cleanup](samsung_cleanup.md) for optional notification, nearby-device and restart controls, plus a reversible Shizuku command for an unwanted Samsung service. |
 | **GrapheneOS** | Follow [GrapheneOS setup](grapheneos_setup.md) for platform-specific setup and compatibility checks. Do **not** apply Samsung-only package commands or settings. |
 
-Keep shared Android steps here. Document platform-specific steps only when they actually differ. Describe what to do and how to verify it, not the state of one person's phone.
+Keep shared Android settings here and platform-specific steps in their respective guides. Include named applications only when they are essential to a documented configuration or automation procedure, and document their exact role. Do not maintain a list of personal applications, browsers, VPNs or other installed software.
 
 ## Niagara backups
 
