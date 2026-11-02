@@ -16,6 +16,10 @@ Repeatable Android setup directions using Niagara Launcher. Follow the shared st
 
 Keep shared Android settings here and platform-specific steps in their respective guides. Include named applications only when they are essential to a documented configuration or automation procedure, and document their exact role. Do not maintain a list of personal applications, browsers, VPNs or other installed software.
 
+## Optional configuration automations
+
+- [Tailscale Auto Rules](automation/tailscale_auto_rules.md): Configure network-dependent Tailscale tunnel behavior, permissions, and background operation. This is a targeted automation guide, not a general VPN app recommendation.
+
 ## Niagara backups
 
 - Existing `.nlb` backups are optional restore files, not application recommendations or a record of a device's expected configuration.
