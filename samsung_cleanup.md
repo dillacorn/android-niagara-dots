@@ -57,7 +57,7 @@ If Shizuku reports **Server is not running**, start it from the Shizuku app firs
 
 - Leave **AR Zone**, **AR Doodle**, camera components, **Good Lock**, Galaxy Store, Samsung Account, security services, and system updates enabled unless a specific unwanted behavior has been identified.
 - Avoid disabling apps solely because they appear on a debloat list. Installed or enabled packages are not automatically running or consuming meaningful battery.
-- Review **Settings > Battery > Background usage limits**, but avoid blanket deep-sleep rules for VPN, messaging, authentication, notification and other services that require reliable background operation.
+- Review **Settings > Battery > Background usage limits**, but avoid blanket deep-sleep rules for functions that depend on continuous background operation.
 - Leave performance profiles unchanged unless testing demonstrates a benefit. Do not assume disabling features improves performance.
 - If policy prompts continue, capture the actual dialog and identify its source before disabling additional system packages.
 
