@@ -1,33 +1,24 @@
 # Caffeine: keep the screen awake
 
-Optional Quick Settings utility for temporarily preventing the display from turning off. It is not a general app-installation recommendation.
+[Install Caffeine](https://play.google.com/store/apps/details?id=moe.zhs.caffeine) to add a temporary screen-awake toggle to Quick Settings.
 
-## Set up
+## Configure
 
-1. Install [Caffeine - Keep Screen On](https://play.google.com/store/apps/details?id=moe.zhs.caffeine).
-2. Pull down **Quick Settings**, choose **Edit**, and add the **Caffeine** tile.
-3. Open Caffeine settings. Choose a **Timeout** for timed use, or **Variable** to change the duration by tapping the tile repeatedly.
-4. Optionally enable **Deactivate automatically** so locking the phone turns Caffeine off.
+1. Edit **Quick Settings** and add the **Caffeine** tile.
+2. In Caffeine, choose a fixed **Timeout** or **Variable** (tap the tile repeatedly to adjust).
+3. Optional: enable **Deactivate automatically** to turn it off when the device locks.
 
 ### Samsung One UI
 
-On Samsung devices running Android 12+, the developer says Caffeine uses **Compatibility mode**, which needs permission to modify system settings.
+On Android 12+, Samsung needs **Compatibility mode** and a battery-optimization exemption.
 
-1. Open **Settings > Apps > Special access > Change system settings** and allow **Caffeine** if its compatibility mode requires it.
-2. Open **Settings > Apps > Caffeine > Battery** and select **Unrestricted** (or use the app's **Ignore battery optimization** option). The developer identifies a battery-optimization exemption as necessary for Samsung and Android 14+.
-3. Return to the Caffeine tile and confirm that it works. Menu paths can differ by One UI version.
+- Allow **Change system settings** for Caffeine under **Settings > Apps > Special access**.
+- Use Caffeine's **Ignore battery optimization** option (or set its battery usage to **Unrestricted**).
 
-## Verify and restore
+## Check / undo
 
-- Turn on Caffeine from Quick Settings and wait longer than the phone's usual screen timeout. The screen should remain awake.
-- Turn it off or lock the device if **Deactivate automatically** is enabled. Verify the usual timeout returns.
-- If the screen stays awake after Caffeine is disabled, restore the preferred timeout under **Settings > Display > Screen timeout**. Do not force-stop Caffeine while compatibility mode is active; the developer warns that this can leave the modified timeout in place.
+Activate the tile and confirm the screen stays awake past the normal timeout. Turn it off and confirm the normal timeout returns. If the timeout stays changed, reset **Settings > Display > Screen timeout**. Avoid force-stopping Caffeine while Compatibility mode is active.
 
-Keeping the screen on indefinitely uses power and may increase burn-in risk on OLED displays. Use the shortest useful duration.
+Long screen-on periods increase power use and OLED wear.
 
-## Sources
-
-- [Caffeine: getting started](https://lab.zhs.moe/caffeine/guide/)
-- [Caffeine: configuration options](https://lab.zhs.moe/caffeine/guide/config/)
-- [Caffeine: device compatibility](https://lab.zhs.moe/caffeine/guide/device-compatibility/)
-- [Caffeine: troubleshooting](https://lab.zhs.moe/caffeine/guide/troubleshooting/)
+Sources: [Caffeine configuration](https://lab.zhs.moe/caffeine/guide/config/) · [Samsung compatibility](https://lab.zhs.moe/caffeine/guide/device-compatibility/) · [Troubleshooting](https://lab.zhs.moe/caffeine/guide/troubleshooting/)
