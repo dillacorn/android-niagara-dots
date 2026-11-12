@@ -5,7 +5,7 @@
 3. OmaLauncher → Settings → Style → Home page (`home.home-page`) → `0`.
 4. Samsung → Settings → Apps → Choose default apps → Home app → **OmaLauncher**.
 
-The maintainer currently uses [Omagara](https://github.com/SimonSchubert/omarchy-widgets/tree/main/faces/dillacorn/omagara), a Niagara-inspired face they developed. **Niagara is the recommended, more feature-complete launcher.**
+The maintainer currently uses [Omagara](https://github.com/SimonSchubert/omarchy-widgets/tree/main/faces/dillacorn/omagara), a Niagara-inspired face they developed. Omagara is a good option if its missing features aren't needed; **Niagara remains the more feature-complete recommendation.**
 
 **OWL 21 limitations:** No contact search, adjustable haptic strength, or Home/Back dismissal of alphabet browsing.
 
