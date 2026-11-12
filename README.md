@@ -4,8 +4,8 @@ Android launcher setup, Samsung cleanup, and optional configuration tools.
 
 ## Launcher
 
-- [OmaLauncher + Omagara](guides/omalauncher_omagara.md) — current setup.
-- [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher) — alternative · [backups](niagra_backup/).
+- [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher) — recommended · [backups](niagra_backup/).
+- [OmaLauncher + Omagara](guides/omalauncher_omagara.md) — currently in use, not the recommended option.
 
 ## Setup guides
 
