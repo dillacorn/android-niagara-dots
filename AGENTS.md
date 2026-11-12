@@ -6,7 +6,7 @@ Guidance for agents editing `android-niagara-dots`.
 
 This is a **short Android settings and configuration guide**, not an inventory of the maintainer's phone.
 
-- Primary coverage: Niagara Launcher, optional OmaLauncher/Omagara, Samsung One UI cleanup, ADB/Shizuku, and useful optional configuration/automation tools.
+- Primary coverage: Niagara Launcher, optional Omalauncher/Omagara, Samsung One UI cleanup, ADB/Shizuku, and useful optional configuration/automation tools.
 - Keep GrapheneOS-specific differences in `grapheneos_setup.md`; never apply Samsung package commands to GrapheneOS.
 - Name an application only when explaining a concrete configuration tool or its necessary companion. Do not document personal browsers, media, shopping, messaging, VPN catalogs, or which apps the maintainer uses.
 - Do not record personal usage, accounts, device identifiers, networks, or private settings. One concise current-launcher note is allowed; usage does not imply a recommendation. Examples must otherwise be generic.
