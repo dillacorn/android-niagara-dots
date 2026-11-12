@@ -1,10 +1,11 @@
 # android-niagara-dots
 
-Android setup, Samsung cleanup, and optional configuration tools.
+Android launcher setup, Samsung cleanup, and optional configuration tools.
 
-## Start with Niagara
+## Launcher
 
-[Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher) · [Launcher backups](niagra_backup/)
+- [Niagara Launcher](https://play.google.com/store/apps/details?id=bitpit.launcher) — recommended · [backups](niagra_backup/).
+- [Omalauncher + Omagara](guides/omalauncher_omagara.md) — currently in use; solid alternative if fewer features are sufficient.
 
 ## Setup guides
 
