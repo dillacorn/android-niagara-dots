@@ -7,14 +7,6 @@
 
 The maintainer currently uses [Omagara](https://github.com/SimonSchubert/omarchy-widgets/tree/main/faces/dillacorn/omagara), a Niagara-inspired face they developed. Omagara is a good option if its missing features aren't needed; **Niagara remains the more feature-complete recommendation.**
 
-**Known Omalauncher / OWL limitations:**
-
-- No contacts source/permission for contact search.
-- No face-level Home/Back or focus-loss event to dismiss alphabet browsing.
-- No haptic strength control; Android determines intensity.
-- No automatic wallpaper brightness sampling or true bottom alpha-mask fade.
-- No native lazy-list scroll offset/controller for full notification-edge rubber-banding.
-- Animations capped at 60 FPS, even on 90/120 Hz displays; slow rendering can reduce the rate. Higher FPS needs an Omalauncher engine change.
-- Automatic sound effects from home-face gestures/animation events are restricted.
+**Omalauncher limit:** OWL animations are capped at 60 FPS, including on 90/120 Hz screens. Higher frame rates require an Omalauncher engine update.
 
 **Switch back:** Samsung → Settings → Apps → Choose default apps → Home app → **Niagara Launcher**.
